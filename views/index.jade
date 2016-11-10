@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  form.form-horizontal#urlForm
+    .col-sm-6.url-input
+      input#urlInput.form-control(type='text', placeholder='www.google.com', name='url')
+    button.btn.btn-default(type='submit') Test Speed
+  #results
+block script
+  script(type="text/javascript", src="/javascripts/drawChart.js")
