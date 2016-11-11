@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var AWS = require('aws-sdk');
+// needs to be region of lambda function
+AWS.config.update({region:'us-east-1'});
 
 /* GET users listing. */
 router.post('/phantom', function(req, res, next) {
